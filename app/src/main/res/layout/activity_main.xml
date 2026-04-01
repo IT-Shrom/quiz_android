@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@android:color/white">
+            android:background="@android:color/black">
 
             <TextView
                 android:id="@+id/tvQuestion"
@@ -35,6 +35,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Hello World!"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
