@@ -5,88 +5,103 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
-    
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:title="@string/app_name" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardFilm"
         android:layout_width="320dp"
         android:layout_height="500dp"
-        android:layout_gravity="center">
-        
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:background="@android:color/black"
             android:gravity="center"
-            android:background="@android:color/black">
+            android:orientation="vertical"
+            android:padding="24dp">
 
             <TextView
                 android:id="@+id/tvQuestion"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Hello World!"
-                android:textStyle="bold"
-                android:textSize="18sp"
                 android:textColor="@android:color/white"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
+                android:textSize="22sp"
+                android:textStyle="bold" />
         </LinearLayout>
-        
-        
-
     </androidx.cardview.widget.CardView>
 
-    <ImageButton
-        android:id="@+id/bIsFaux"
-        android:layout_width="25pt"
-        android:layout_height="25pt"
-        android:contentDescription="@string/desc"
-        android:scaleType="fitCenter"
-        android:layout_gravity="bottom|start"
-        android:background="@android:color/transparent"
-        android:layout_margin="20dp"
-        android:src="@drawable/annuler"/>
-    <ImageButton
-        android:layout_width="25pt"
-        android:layout_height="25pt"
-        android:contentDescription="@string/desc"
-        android:scaleType="fitCenter"
-        android:layout_gravity="bottom|center"
-        android:background="@android:color/transparent"
-        android:layout_margin="20dp"
-        android:src="@drawable/reboot"/>
-    <ImageButton
-        android:layout_width="25pt"
-        android:layout_height="25pt"
-        android:contentDescription="@string/desc"
-        android:scaleType="fitCenter"
-        android:layout_gravity="bottom|end"
-        android:background="@android:color/transparent"
-        android:layout_margin="20dp"
-        android:src="@drawable/fait"/>
+    <LinearLayout
+        android:id="@+id/layoutBoutons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <!-- <TextView
+        <ImageButton
+            android:id="@+id/bIsFaux"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="32dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/desc_non"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/annuler" />
+
+        <ImageButton
+            android:id="@+id/bRestart"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="32dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/desc_restart"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/reboot" />
+
+        <ImageButton
+            android:id="@+id/bIsVrai"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/desc_oui"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fait" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResultat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" /> -->
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="85dp"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </FrameLayout>
+
+
+
